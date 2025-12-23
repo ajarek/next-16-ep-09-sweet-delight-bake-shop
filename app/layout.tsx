@@ -2,6 +2,7 @@ import type { Metadata } from "next"
 import { Plus_Jakarta_Sans } from "next/font/google"
 import "./globals.css"
 import { ThemeProvider } from "@/components/ThemeProvider"
+import { ClerkProvider } from "@clerk/nextjs"
 
 const jakartaSans = Plus_Jakarta_Sans({
   variable: "--font-jakarta-sans",
@@ -19,6 +20,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
+     <ClerkProvider>
     <html lang='pl' suppressHydrationWarning>
       <body className={`${jakartaSans.variable} antialiased`}>
         <ThemeProvider
@@ -31,5 +33,6 @@ export default function RootLayout({
         </ThemeProvider>
       </body>
     </html>
+    </ClerkProvider>
   )
 }

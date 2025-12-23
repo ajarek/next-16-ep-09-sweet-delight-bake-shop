@@ -24,16 +24,16 @@ export function ModeToggle() {
 
   return (
     <Button
-      variant='default'
+      variant='ghost'
       size='icon'
       onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
       aria-label='Toggle theme'
-      className='cursor-pointer bg-primary hover:bg-primary/80 '
+      className='cursor-pointer bg-transparent hover:bg-transparent focus:bg-transparent active:bg-transparent'
     >
       {theme === "dark" ? (
-        <Sun className='h-[1.2rem] w-[1.2rem]' />
+        <Sun size={32} className='' />
       ) : (
-        <Moon className='h-[1.2rem] w-[1.2rem]' />
+        <Moon size={32} className='' />
       )}
     </Button>
   )

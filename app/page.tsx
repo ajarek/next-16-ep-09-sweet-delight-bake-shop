@@ -8,7 +8,7 @@ export default function Home() {
           <Header />
         </div>
 
-        <div className='w-full flex flex-col h-screen justify-start items-center'>
+        <div className='w-full flex flex-col h-screen justify-start items-center border-l '>
           <header className='w-full h-16 flex justify-center items-center '>
             <h2 className='text-xl  font-semibold'>Zamówienie</h2>
           </header>
