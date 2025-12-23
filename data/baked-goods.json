@@ -4,7 +4,7 @@
         "name": "Bagietka",
         "price": 3.5,
         "category": "Chleb",
-        "image": "bagietka.png",
+        "image": "/images/bagietka.png",
         "description": "Tradycyjna francuska bagietka z chrupiącą skórką i miękkim wnętrzem.",
         "quantity": 50
     },
@@ -13,7 +13,7 @@
         "name": "Croissant",
         "price": 4.0,
         "category": "Ciasto",
-        "image": "croissant.png",
+        "image": "/images/croissant.png",
         "description": "Maślany croissant z delikatnym, warstwowym ciastem.",
         "quantity": 30
     },
@@ -22,7 +22,7 @@
         "name": "Chleb żytni",
         "price": 5.0,
         "category": "Chleb",
-        "image": "chleb_zytni.png",
+        "image": "/images/chleb_zytni.png",
         "description": "Zdrowy chleb z pełnego ziarna pszenicy, idealny do ugotowania.",
         "quantity": 25
     },
@@ -31,7 +31,7 @@
         "name": "Makaronik",
         "price": 2.5,
         "category": "Ciasto",
-        "image": "makaroniki.png",
+        "image": "/images/makaroniki.png",
         "description": "Kolorowy makaronik z delikatnym nadzieniem, dostępny w różnych smakach.",
         "quantity": 100
     },
@@ -41,7 +41,7 @@
         "name": "Pączek z różą",
         "price": 3.0,
         "category": "Ciasto",
-        "image": "paczek.png",
+        "image": "/images/paczek.png",
         "description": "Tradycyjny pączek nadziewany konfiturą różaną, posypany cukrem pudrem.",
         "quantity": 40
     },
@@ -50,7 +50,7 @@
         "name": "Sernik królewski",
         "price": 5.5,
         "category": "Ciasto",
-        "image": "sernik_krolewski.png",
+        "image": "/images/sernik_krolewski.png",
         "description": "Klasyczny sernik z kremowym nadzieniem, idealny do ugotowania.",
         "quantity": 20
     },
@@ -59,7 +59,7 @@
         "name": "Szarlotka",
         "price": 4.5,
         "category": "Ciasto",
-        "image": "szarlotka.png",
+        "image": "/images/szarlotka.png",
         "description": "Klasyczna szarlotka z jabłkami, idealna do ugotowania.",
         "quantity": 30
     },
@@ -68,7 +68,7 @@
         "name": "Chleb wiejski",
         "price": 6.0,
         "category": "Chleb",
-        "image": "chleb_wiejski.png",
+        "image": "/images/chleb_wiejski.jpg",
         "description": "Zdrowy chleb z pełnego ziarna pszenicy, idealny do ugotowania.",
         "quantity": 25
     },
@@ -77,7 +77,7 @@
         "name": "Chleb duński",
         "price": 6.0,
         "category": "Chleb",
-        "image": "chleb_dunski.png",
+        "image": "/images/chleb_dunski.jpg",
         "description": "Tradycyjny chleb duński z delikatnym, miękkim wnętrzem.",
         "quantity": 25
     },
@@ -86,7 +86,7 @@
         "name": "Babeczka czekoladowa",
         "price": 4.0,
         "category": "Ciasto",
-        "image": "babeczka_czekoladowa.png",
+        "image": "/images/babeczka.jpg",
         "description": "Klasyczna babeczka czekoladowa z kremowym nadzieniem.",
         "quantity": 35
     },
@@ -95,7 +95,7 @@
         "name": "Tort czekoladowy",
         "price": 5.5,
         "category": "Ciasto",
-        "image": "tort_czekoladowy.jpg",
+        "image": "/images/tort_czekoladowy.jpg",
         "description": "Klasyczny tort czekoladowy z kremowym nadzieniem.",
         "quantity": 20
     },
@@ -104,7 +104,7 @@
         "name": "Tort truskawkowy",
         "price": 5.5,
         "category": "Ciasto",
-        "image": "tort_truskawkowy.jpg",
+        "image": "/images/tort_truskawkowy.jpg",
         "description": "Klasyczny tort truskawkowy z kremowym nadzieniem.",
         "quantity": 20
     },
@@ -113,8 +113,26 @@
         "name": "Tort waniliowy",
         "price": 5.5,
         "category": "Ciasto",
-        "image": "tort_waniliowy.jpg",
+        "image": "/images/tort_waniliowy.jpg",
         "description": "Klasyczny tort waniliowy z kremowym nadzieniem.",
+        "quantity": 20
+    },
+    {
+        "id": 14,
+        "name": "Kawa Czarna",
+        "price": 5.5,
+        "category": "Napój",
+        "image": "/images/kawa_czarna.png",
+        "description": "Klasyczna kawa czarna z kremowym nadzieniem.",
+        "quantity": 20
+    },
+    {
+        "id": 15,
+        "name": "Kawa Latte",
+        "price": 5.5,
+        "category": "Napój",
+        "image": "/images/kawa_latte.png",
+        "description": "Klasyczna kawa latte z kremowym nadzieniem.",
         "quantity": 20
     }
 ]
