@@ -3,6 +3,7 @@ import { Plus_Jakarta_Sans } from "next/font/google"
 import "./globals.css"
 import { ThemeProvider } from "@/components/ThemeProvider"
 import { ClerkProvider } from "@clerk/nextjs"
+import { Toaster } from "@/components/ui/sonner"
 
 const jakartaSans = Plus_Jakarta_Sans({
   variable: "--font-jakarta-sans",
@@ -30,6 +31,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           {children}
+          <Toaster />
         </ThemeProvider>
       </body>
     </html>

@@ -1,5 +1,6 @@
 import BakedGoods from "@/components/BakedGoods"
 import Header from "@/components/Header"
+import Order from "@/components/Order"
 
 export default function Home() {
   return (
@@ -11,9 +12,8 @@ export default function Home() {
         </div>
 
         <div className='w-full flex flex-col h-screen justify-start items-center border-l '>
-          <header className='w-full h-16 flex justify-center items-center '>
-            <h2 className='text-xl  font-semibold'>Zamówienie</h2>
-          </header>
+          
+          <Order />
         </div>
       </section>
     </main>

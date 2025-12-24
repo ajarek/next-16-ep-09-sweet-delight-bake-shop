@@ -12,7 +12,7 @@
         "id": 2,
         "name": "Croissant",
         "price": 4.0,
-        "category": "Ciasto",
+        "category": "Desery",
         "image": "/images/croissant.png",
         "description": "Maślany croissant z delikatnym, warstwowym ciastem.",
         "quantity": 30
@@ -30,7 +30,7 @@
         "id": 4,
         "name": "Makaronik",
         "price": 2.5,
-        "category": "Ciasto",
+        "category": "Desery",
         "image": "/images/makaroniki.png",
         "description": "Kolorowy makaronik z delikatnym nadzieniem, dostępny w różnych smakach.",
         "quantity": 100
@@ -40,7 +40,7 @@
         "id": 5,
         "name": "Pączek z różą",
         "price": 3.0,
-        "category": "Ciasto",
+        "category": "Desery",
         "image": "/images/paczek.png",
         "description": "Tradycyjny pączek nadziewany konfiturą różaną, posypany cukrem pudrem.",
         "quantity": 40

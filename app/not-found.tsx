@@ -6,7 +6,7 @@ export default function NotFound() {
   return (
     <main className='max-w-5xl mx-auto px-5 py-20 min-h-screen flex items-center justify-center'>
       <div className='w-full flex flex-col items-center text-center gap-6'>
-        <div className='relative w-full h-40 rounded-lg bg-muted flex items-center justify-center shadow-md'>
+        <div className='relative w-[285px] h-[160px] rounded-lg bg-muted flex items-center justify-center shadow-md'>
           <Image
             src='/images/no_cookie.jpg'
             alt='Nie ma ciasteczek - obrazek humorystyczny'
