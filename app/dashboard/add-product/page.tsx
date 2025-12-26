@@ -38,6 +38,9 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select"
+import { createProduct } from "@/lib/actions/createProduct"
+
+
 
 const formSchema = z.object({
   name: z
@@ -70,21 +73,19 @@ const AddProductForm = () => {
     },
   })
 
-  function onSubmit(data: z.infer<typeof formSchema>) {
-    toast("You submitted the following values:", {
-      description: (
-        <pre className='bg-code text-code-foreground mt-2 w-[320px] overflow-x-auto rounded-md p-4'>
-          <code>{JSON.stringify(data, null, 2)}</code>
-        </pre>
-      ),
-      position: "bottom-right",
-      classNames: {
-        content: "flex flex-col gap-2",
-      },
-      style: {
-        "--border-radius": "calc(var(--radius)  + 4px)",
-      } as React.CSSProperties,
+    async function onSubmit(data: z.infer<typeof formSchema>) {
+    const payload = {
+      ...data,
+     
+      
+    }
+
+    await createProduct(payload)
+    toast("Produkt został dodany do oferty.", {
+      description: "Produkt został dodany do oferty.",
     })
+    console.log(payload)
+    form.reset()
   }
 
   return (

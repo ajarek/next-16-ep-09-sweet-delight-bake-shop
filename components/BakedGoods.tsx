@@ -1,6 +1,6 @@
 "use client"
 
-import baked_goods from "@/data/baked-goods.json"
+import { getProducts } from "@/lib/actions/getProducts"
 import {
   Card,
   CardAction,
@@ -25,7 +25,7 @@ interface BakedGood {
   quantity: number
 }
 
-const BakedGoods = ({ name = "" }: { name?: string }) => {
+const BakedGoods = ({ name = "" ,baked_goods}: { name?: string , baked_goods: BakedGood[] }) => {
   const [category, setCategory] = useState("all")
 
   const filteredBakedGoods = baked_goods.filter((item) => {
@@ -73,7 +73,7 @@ const BakedGoods = ({ name = "" }: { name?: string }) => {
         <Button
           variant='default'
           className='bg-gray-500 px-4 py-2 cursor-pointer focus:bg-primary rounded-2xl'
-          onClick={() => setCategory("Napój")}
+          onClick={() => setCategory("Napoje")}
         >
           <Image src='/icons/coffee.svg' alt='all' width={24} height={24} />
           Napoje
