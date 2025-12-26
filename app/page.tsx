@@ -16,7 +16,7 @@ export default async function Home({
           <BakedGoods name={name || ""} />
         </div>
 
-        <div className='w-full flex flex-col h-screen justify-start items-center border-l '>
+        <div className='w-full flex flex-col h-screen justify-start items-center border-l px-2'>
           <Order />
         </div>
       </section>

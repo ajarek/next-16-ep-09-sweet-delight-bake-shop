@@ -18,7 +18,7 @@ const Header = () => {
       <Logo />
       <SelectName query='name' />
       <div className='flex items-center gap-4'>
-        <Button asChild className='px-3 py-1 hidden sm:inline-flex'>
+        <Button asChild className='px-5 py-1 hidden sm:inline-flex'>
           <Link href='/dashboard' className='font-medium'>
             Panel
           </Link>

@@ -8,3 +8,13 @@ generator client {
 datasource db {
   provider = "postgresql"
 }
+
+model BakedGood {
+  id        Int     @id @default(autoincrement())
+  name     String
+  price   Float
+  category String
+  image String
+  description String
+  quantity Int
+}
