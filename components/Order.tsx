@@ -14,20 +14,25 @@ import {
   Trash2,
 } from "lucide-react"
 import { toast } from "sonner"
+import { addTransaction } from "@/lib/actions/addTransaction"
+
+const RABAT = 0.1
+const VAT = 0.08
 
 const Order = () => {
   const [category, setCategory] = useState("Na_Miejscu")
   const [payment, setPayment] = useState("Gotówka")
   const { items, increment, decrement, removeAllFromCart } = useCartStore()
-
-  const handlePayment = () => {
+  const transaction = {Category: category, Payment: payment, Rabat: RABAT, Podatek: VAT, Do_zapłaty: items.reduce((total, item) => total + item.price * item.quantity * (1 + VAT - RABAT), 0), Items: items, date: new Date()}
+  const handlePayment = async () => {
     toast(`Płatność zrealizowana na kwotę ${items
             .reduce(
               (total, item) =>
-                total + item.price * item.quantity * (1.08 - 0.1),
+                total + item.price * item.quantity * (1 + VAT - RABAT),
               0
             )
             .toFixed(2)} PLN`)
+    await addTransaction(transaction)
     removeAllFromCart()
   }
   return (
@@ -120,11 +125,11 @@ const Order = () => {
         </p>
       </div>
       <div className='flex justify-between items-center pr-2'>
-        <p className=''>Podatek (8%)</p>
+        <p className=''>Podatek ({VAT * 100}%)</p>
         <p className=''>
           {items
             .reduce(
-              (total, item) => total + item.price * item.quantity * 0.08,
+              (total, item) => total + item.price * item.quantity * VAT,
               0
             )
             .toFixed(2)}{" "}
@@ -132,12 +137,12 @@ const Order = () => {
         </p>
       </div>
       <div className='flex justify-between items-center pr-2'>
-        <p className=''>Rabat (10%)</p>
+        <p className=''>Rabat ({RABAT * 100}%)</p>
         <p className=''>
           -
           {items
             .reduce(
-              (total, item) => total + item.price * item.quantity * 0.1,
+              (total, item) => total + item.price * item.quantity * RABAT,
               0
             )
             .toFixed(2)}{" "}
@@ -150,7 +155,7 @@ const Order = () => {
           {items
             .reduce(
               (total, item) =>
-                total + item.price * item.quantity * (1.08 - 0.1),
+                total + item.price * item.quantity * (1 + VAT - RABAT),
               0
             )
             .toFixed(2)}{" "}
