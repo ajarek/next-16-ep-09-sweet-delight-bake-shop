@@ -32,11 +32,7 @@ const items = [
     url: "/dashboard/add-product",
     icon: ArchiveRestore ,
   },
-  {
-    title: "Produkty",
-    url: "/dashboard/products",
-    icon: Archive,
-  },
+ 
   {
     title: "Historia Transakcji",
     url: "/dashboard/transactions",

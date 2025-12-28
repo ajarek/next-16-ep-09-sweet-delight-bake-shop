@@ -1,6 +1,5 @@
 "use client"
 
-import { getProducts } from "@/lib/actions/getProducts"
 import {
   Card,
   CardAction,
@@ -25,7 +24,13 @@ interface BakedGood {
   quantity: number
 }
 
-const BakedGoods = ({ name = "" ,baked_goods}: { name?: string , baked_goods: BakedGood[] }) => {
+const BakedGoods = ({
+  name = "",
+  baked_goods,
+}: {
+  name?: string
+  baked_goods: BakedGood[]
+}) => {
   const [category, setCategory] = useState("all")
 
   const filteredBakedGoods = baked_goods.filter((item) => {
@@ -88,7 +93,7 @@ const BakedGoods = ({ name = "" ,baked_goods}: { name?: string , baked_goods: Ba
               <CardHeader>
                 <div className='relative w-full aspect-square rounded-lg overflow-hidden'>
                   <Image
-                    src={item.image}
+                    src={item.image.trimEnd()}
                     alt='image'
                     width={512}
                     height={512}

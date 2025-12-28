@@ -32,7 +32,7 @@ export const createProduct = async ({
       },
     })
 
-    revalidateTag("bakedGoods", { expire: 0 })
+    revalidateTag("dashboard", { expire: 0 })
     return newProduct
   } catch (error) {
     console.error("Error creating product:", error)
