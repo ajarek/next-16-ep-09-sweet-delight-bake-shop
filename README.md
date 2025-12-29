@@ -1,5 +1,8 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
+
+<img width="800" height="393" alt="bake_shop" src="https://github.com/user-attachments/assets/a194e960-2356-46f9-ab0e-42a4d7f00168" />
+
 ## Getting Started
 
 First, run the development server:
