@@ -11,14 +11,14 @@ export default async function Home({
 }) {
   const { name } = await searchParams
   const baked_goods = await getProducts()
- 
+
   return (
     <main className='min-h-screen  max-w-8xl mx-auto   '>
       <section className='grid grid-cols-1 xl:grid-cols-[3fr_1fr]'>
         <div className='flex flex-col   '>
           <Header />
           <Suspense fallback={<div>Loading...</div>}>
-          <BakedGoods name={name || ""} baked_goods={baked_goods} />
+            <BakedGoods name={name || ""} baked_goods={baked_goods} />
           </Suspense>
         </div>
 

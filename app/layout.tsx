@@ -21,20 +21,20 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-     <ClerkProvider>
-    <html lang='pl' suppressHydrationWarning>
-      <body className={`${jakartaSans.variable} antialiased`}>
-        <ThemeProvider
-          attribute='class'
-          defaultTheme='dark'
-          enableSystem
-          disableTransitionOnChange
-        >
-          {children}
-          <Toaster />
-        </ThemeProvider>
-      </body>
-    </html>
+    <ClerkProvider>
+      <html lang='pl' suppressHydrationWarning>
+        <body className={`${jakartaSans.variable} antialiased`}>
+          <ThemeProvider
+            attribute='class'
+            defaultTheme='dark'
+            enableSystem
+            disableTransitionOnChange
+          >
+            {children}
+            <Toaster />
+          </ThemeProvider>
+        </body>
+      </html>
     </ClerkProvider>
   )
 }

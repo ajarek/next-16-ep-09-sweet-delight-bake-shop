@@ -46,7 +46,11 @@ const Dashboard = async () => {
               <TableCell>{baked_good.category}</TableCell>
               <TableCell className=' flex items-center gap-2 mt-3'>
                 <ButtonDeleteProduct id={baked_good.id} />
-                <Button asChild variant="outline" className='text-xl bg-transparent border-0 cursor-pointer'>
+                <Button
+                  asChild
+                  variant='outline'
+                  className='text-xl bg-transparent border-0 cursor-pointer'
+                >
                   <Link href={`/dashboard/edit-product/${baked_good.id}`}>
                     🖊️
                   </Link>

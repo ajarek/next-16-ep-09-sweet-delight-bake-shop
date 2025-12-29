@@ -90,7 +90,7 @@ export const EditProductFormClient = ({
       id: product.id,
       ...data,
     }
-   
+
     await updateProduct(payload)
     toast("Produkt został zaktualizowany.", {
       description: "Produkt został zaktualizowany.",

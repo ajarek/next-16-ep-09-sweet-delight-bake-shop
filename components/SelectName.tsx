@@ -28,7 +28,7 @@ const SelectName = ({ query }: SearchProps) => {
   }
 
   return (
-    <div className='relative w-lg flex-1'>
+    <div className='relative w-lg flex-1 hidden sm:inline-flex'>
       <Image
         src='/icons/search.svg'
         alt='search'

@@ -23,15 +23,28 @@ const Order = () => {
   const [category, setCategory] = useState("Na_Miejscu")
   const [payment, setPayment] = useState("Gotówka")
   const { items, increment, decrement, removeAllFromCart } = useCartStore()
-  const transaction = {Category: category, Payment: payment, Rabat: RABAT, Podatek: VAT, Do_zapłaty: items.reduce((total, item) => total + item.price * item.quantity * (1 + VAT - RABAT), 0), Items: items, date: new Date()}
+  const transaction = {
+    Category: category,
+    Payment: payment,
+    Rabat: RABAT,
+    Podatek: VAT,
+    Do_zapłaty: items.reduce(
+      (total, item) => total + item.price * item.quantity * (1 + VAT - RABAT),
+      0
+    ),
+    Items: items,
+    date: new Date(),
+  }
   const handlePayment = async () => {
-    toast(`Płatność zrealizowana na kwotę ${items
-            .reduce(
-              (total, item) =>
-                total + item.price * item.quantity * (1 + VAT - RABAT),
-              0
-            )
-            .toFixed(2)} PLN`)
+    toast(
+      `Płatność zrealizowana na kwotę ${items
+        .reduce(
+          (total, item) =>
+            total + item.price * item.quantity * (1 + VAT - RABAT),
+          0
+        )
+        .toFixed(2)} PLN`
+    )
     await addTransaction(transaction)
     removeAllFromCart()
   }
@@ -85,7 +98,7 @@ const Order = () => {
                 className='rounded-lg'
               />
               <div className='w-full max-w-[120px] text-left'>
-                <p className='truncate font-bold'>{item.name.slice(0,12)}</p>
+                <p className='truncate font-bold'>{item.name.slice(0, 12)}</p>
                 <p>{item.price.toFixed(2)} PLN</p>
               </div>
               <div className='w-full max-w-[60px] grid grid-cols-3 gap-2 '>
@@ -165,7 +178,11 @@ const Order = () => {
       <div className='w-full flex items-center justify-end'>
         <div className='w-full grid grid-cols-3 gap-4'>
           <button
-            className={`group relative flex flex-col items-center justify-center gap-3 p-6 rounded-xl border-2     shadow-sm hover:shadow-md transition-all cursor-pointer ${payment === "Gotówka" ? "border-primary bg-primary/5 text-primary" : "border-transparent"}`}
+            className={`group relative flex flex-col items-center justify-center gap-3 p-6 rounded-xl border-2     shadow-sm hover:shadow-md transition-all cursor-pointer ${
+              payment === "Gotówka"
+                ? "border-primary bg-primary/5 text-primary"
+                : "border-transparent"
+            }`}
             onClick={() => setPayment("Gotówka")}
           >
             {payment === "Gotówka" && (
@@ -178,7 +195,11 @@ const Order = () => {
           </button>
 
           <button
-           className={`group relative flex flex-col items-center justify-center gap-3 p-6 rounded-xl border-2     shadow-sm hover:shadow-md transition-all cursor-pointer ${payment === "Karta" ? "border-primary bg-primary/5 text-primary" : "border-transparent"}`}
+            className={`group relative flex flex-col items-center justify-center gap-3 p-6 rounded-xl border-2     shadow-sm hover:shadow-md transition-all cursor-pointer ${
+              payment === "Karta"
+                ? "border-primary bg-primary/5 text-primary"
+                : "border-transparent"
+            }`}
             onClick={() => setPayment("Karta")}
           >
             {payment === "Karta" && (
@@ -191,7 +212,11 @@ const Order = () => {
           </button>
 
           <button
-            className={`group relative flex flex-col items-center justify-center gap-3 p-6 rounded-xl border-2     shadow-sm hover:shadow-md transition-all cursor-pointer ${payment === "BLIK / Tel" ? "border-primary bg-primary/5 text-primary" : "border-transparent"}`}
+            className={`group relative flex flex-col items-center justify-center gap-3 p-6 rounded-xl border-2     shadow-sm hover:shadow-md transition-all cursor-pointer ${
+              payment === "BLIK / Tel"
+                ? "border-primary bg-primary/5 text-primary"
+                : "border-transparent"
+            }`}
             onClick={() => setPayment("BLIK / Tel")}
           >
             {payment === "BLIK / Tel" && (

@@ -21,19 +21,18 @@ export default function NotFound() {
         </h1>
 
         <p className='max-w-xl text-muted-foreground'>
-         Wygląda na to, że ta strona jest niedostępna lub adres jest niepoprawny. Spróbuj wrócić na stronę główną lub zweryfikować adres URL.
+          Wygląda na to, że ta strona jest niedostępna lub adres jest
+          niepoprawny. Spróbuj wrócić na stronę główną lub zweryfikować adres
+          URL.
         </p>
 
         <div className='flex gap-3'>
           <Link href='/'>
             <Button>Wróć do sklepu</Button>
           </Link>
-          
         </div>
 
-        <p className='text-xl text-muted-foreground'>
-          Kod błędu: 404
-        </p>
+        <p className='text-xl text-muted-foreground'>Kod błędu: 404</p>
       </div>
     </main>
   )

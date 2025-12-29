@@ -17,5 +17,4 @@ export const updateProduct = async (payload: BakedGoods) => {
   }
   revalidatePath("/dashboard")
   redirect("/dashboard")
-  
 }

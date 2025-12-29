@@ -1,6 +1,5 @@
 "use client"
 
-import * as React from "react"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { Controller, useForm } from "react-hook-form"
 import { toast } from "sonner"
@@ -17,8 +16,6 @@ import {
 } from "@/components/ui/card"
 import {
   Field,
-  FieldContent,
-  FieldDescription,
   FieldError,
   FieldGroup,
   FieldLabel,
@@ -34,13 +31,10 @@ import {
   Select,
   SelectContent,
   SelectItem,
-  SelectSeparator,
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select"
 import { createProduct } from "@/lib/actions/createProduct"
-
-
 
 const formSchema = z.object({
   name: z
@@ -73,11 +67,9 @@ const AddProductForm = () => {
     },
   })
 
-    async function onSubmit(data: z.infer<typeof formSchema>) {
+  async function onSubmit(data: z.infer<typeof formSchema>) {
     const payload = {
       ...data,
-     
-      
     }
 
     await createProduct(payload)
@@ -268,7 +260,7 @@ const AddProductForm = () => {
             Reset
           </Button>
           <Button type='submit' form='form-rhf-demo' className='w-1/2 '>
-            Submit
+            Dodaj Produkt
           </Button>
         </Field>
       </CardFooter>

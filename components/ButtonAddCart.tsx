@@ -8,13 +8,12 @@ import { ShoppingBag } from "lucide-react"
 import { Button } from "./ui/button"
 
 const ButtonAddCart = ({
-   id,
-    name,
-    price,
-    category,
-    image,
-    description,
-    
+  id,
+  name,
+  price,
+  category,
+  image,
+  description,
 }: BakedGoods) => {
   const router = useRouter()
   const { addItemToCart, items } = useCartStore()
@@ -27,13 +26,13 @@ const ButtonAddCart = ({
           return
         }
         addItemToCart({
-         id,
-         name,
-         price,
-         category,
-         image,
-         description,
-         quantity: 1
+          id,
+          name,
+          price,
+          category,
+          image,
+          description,
+          quantity: 1,
         })
 
         toast.success("Produkt został zamówiony")
